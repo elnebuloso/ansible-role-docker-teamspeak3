@@ -1,0 +1,18 @@
+---
+- name: set docker_teamspeak3_container_volume
+  set_fact: docker_teamspeak3_container_volume="{{docker_teamspeak3_container_volume_base}}/{{docker_teamspeak3_container_name}}-{{docker_teamspeak3_version}}"
+
+- name: create volume directory
+  file: path={{docker_teamspeak3_container_volume}} state=directory recurse=yes
+
+- name: install container
+  docker:
+    name: "{{docker_teamspeak3_container_name}}"
+    image: "luzifer/teamspeak3:{{docker_teamspeak3_version}}"
+    state: "{{docker_teamspeak3_state}}"
+    ports:
+      - "{{docker_teamspeak3_container_port_9987}}:9987/udp"
+      - "{{docker_teamspeak3_container_port_10011}}:10011"
+      - "{{docker_teamspeak3_container_port_30033}}:30033"
+    volumes:
+      - "{{docker_teamspeak3_container_volume}}:/teamspeak3"
