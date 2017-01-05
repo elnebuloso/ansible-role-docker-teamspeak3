@@ -16,3 +16,20 @@
       - "{{docker_teamspeak3_container_port_30033}}:30033"
     volumes:
       - "{{docker_teamspeak3_container_volume}}:/teamspeak3"
+
+
+################################################################################################
+
+- name: set systemd_docker_container_name
+  set_fact: systemd_docker_container_name="{{docker_teamspeak3_container_name}}"
+
+- name: set systemd_script
+  set_fact: systemd_script="{{docker_teamspeak3_container_name}}.service"
+
+- name: create systemd conf
+  template: src=systemd.conf dest=/etc/systemd/system/{{systemd_script}} mode=644
+
+- name: enable systemd conf
+  command: systemctl enable {{systemd_script}}
+  args:
+    creates: /etc/systemd/system/default.target.wants/{{systemd_script}}
