@@ -6,7 +6,7 @@
   file: path={{docker_teamspeak3_container_volume}} state=directory recurse=yes
 
 - name: install container
-  docker:
+  docker_container:
     name: "{{docker_teamspeak3_container_name}}"
     image: "luzifer/teamspeak3:{{docker_teamspeak3_version}}"
     state: "{{docker_teamspeak3_state}}"

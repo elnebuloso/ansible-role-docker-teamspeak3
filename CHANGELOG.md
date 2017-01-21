@@ -1,5 +1,11 @@
 # changelog
 
+## 1.2.0
+
+- http://docs.ansible.com/ansible/docker_container_module.html#docker-container
+- docker deprecated
+- docker_container, min. ansible 2.1
+
 ## 1.1.0
 
 - added systemd configuration
