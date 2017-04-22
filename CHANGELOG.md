@@ -1,5 +1,10 @@
 # changelog
 
+## 1.3.0
+
+- docker_teamspeak3_restart: "no"
+- docker_teamspeak3_restart_policy: "always"
+
 ## 1.2.0
 
 - http://docs.ansible.com/ansible/docker_container_module.html#docker-container

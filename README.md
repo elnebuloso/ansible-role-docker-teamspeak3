@@ -18,6 +18,8 @@ docker_teamspeak3_container_volume_base: "/opt/docker"
 docker_teamspeak3_container_port_9987: "9987"
 docker_teamspeak3_container_port_10011: "10011"
 docker_teamspeak3_container_port_30033: "30033"
+docker_teamspeak3_restart: "no"
+docker_teamspeak3_restart_policy: "always"
 ```
 
 ## Example Playbook

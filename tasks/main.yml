@@ -10,6 +10,8 @@
     name: "{{docker_teamspeak3_container_name}}"
     image: "luzifer/teamspeak3:{{docker_teamspeak3_version}}"
     state: "{{docker_teamspeak3_state}}"
+    restart: "{{docker_teamspeak3_restart}}"
+    restart_policy: "{{docker_teamspeak3_restart_policy}}"
     ports:
       - "{{docker_teamspeak3_container_port_9987}}:9987/udp"
       - "{{docker_teamspeak3_container_port_10011}}:10011"
