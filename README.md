@@ -8,26 +8,14 @@ This role requires Ansible 2.0 or higher, and platform requirements are listed i
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `defaults/main.yml`):
-
-```
-docker_teamspeak3_state: "started"
-docker_teamspeak3_version: "latest"
-docker_teamspeak3_container_name: "teamspeak3"
-docker_teamspeak3_container_volume_base: "/opt/docker"
-docker_teamspeak3_container_port_9987: "9987"
-docker_teamspeak3_container_port_10011: "10011"
-docker_teamspeak3_container_port_30033: "30033"
-docker_teamspeak3_restart: "no"
-docker_teamspeak3_restart_policy: "always"
-```
+- [`defaults/main.yml`](https://github.com/elnebuloso/ansible-role-docker-teamspeak3/blob/master/defaults/main.yml)
 
 ## Example Playbook
 
 ```
 - hosts: localhost
   roles:
-    - { role: elnebuloso.docker-teamspeak3 }
+    - role: elnebuloso.docker-teamspeak3
 ```
 
 ## Dependencies
