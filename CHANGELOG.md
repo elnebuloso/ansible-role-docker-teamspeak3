@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.5.0] - 2017-07-28
 ### Added
-- docker_teamspeak3_pull: "yes"
+- docker_teamspeak3_pull: "no"
 - docker_teamspeak3_state: "started"
 - docker_teamspeak3_restart_policy: "always"
 
