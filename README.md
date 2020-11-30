@@ -1,6 +1,6 @@
 # Ansible Role - Teamspeak3 for Docker
 
-[![Build Status](https://travis-ci.org/elnebuloso/ansible-role-docker-teamspeak3.svg?branch=master)](https://travis-ci.org/elnebuloso/ansible-role-docker-teamspeak3)
+![abandoned](https://img.shields.io/badge/project-abandoned-red)
 
 ## Requirements
 
